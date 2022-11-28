@@ -1,0 +1,11 @@
+@baseUrl = http://localhost:5000
+
+#Tag
+# @name getAllTag
+GET {{baseUrl}}/tag
+###
+# # @name getTagByID
+# GET {{baseUrl}}/Tag/detail/3
+###
+# @name addTag
+POST {{baseUrl}}/tag/create/demoTag

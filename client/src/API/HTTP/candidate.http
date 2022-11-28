@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:5000
+
+#Candidate
+# @name getAllCandidate
+GET {{baseUrl}}/candidate
+###
+# @name getCandidateByUsername
+GET {{baseUrl}}/candidate/detail/demoCandidate
+###
+# @name addCandidate
+POST {{baseUrl}}/candidate/create
+Content-Type: application/json
+
+{
+    "username":"tungba5"
+}
+###
+# @name deleteCandidate
+DELETE {{baseUrl}}/candidate/delete/democandidate
+###
+# @name updateCandidate
+PUT {{baseUrl}}/candidate/update
+Content-Type: application/json
+
+{
+    "idCandidate": 11,
+    "username": "candidate",
+    "name": "Demo candidate",
+    "image": "https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-1/302171787_1812182202473423_2219482232048890630_n.jpg?stp=dst-jpg_p240x240&_nc_cat=108&ccb=1-7&_nc_sid=7206a8&_nc_ohc=bPzB2J_G23kAX90njTC&_nc_ht=scontent.fhan14-2.fna&oh=00_AfAhWL5Bk4yzeN_y5RGgBSC2jMc4PrnHl4PV9MyQMGER6g&oe=6385CD64",
+    "email": "20021467@vnu.edu.vn",
+    "contactInfo": "0965453423",
+    "workExperience": "Junior",
+    "skills": "Java,NodeJS,ReactJS",
+    "education": "VNU",
+    "summary": "I have experience in Web Development",
+    "location": "Ha Noi",
+    "appliedJob": "3",
+    "pendingJob": "7,9"
+}
+

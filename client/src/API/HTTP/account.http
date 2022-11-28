@@ -1,0 +1,35 @@
+@baseUrl = http://localhost:5000
+
+#Account
+# @name getAllAccount
+GET {{baseUrl}}/account
+###
+# # @name getAccountByID
+# GET {{baseUrl}}/account/detail/3
+###
+# @name getAccountByUsername
+GET {{baseUrl}}/account/detail/demoaccount
+###
+# @name addAccount
+POST {{baseUrl}}/account/create
+Content-Type: application/json
+
+{
+    "username":"company",
+    "password":"1",
+    "role": "company"
+}
+###
+# @name deleteAccount
+DELETE {{baseUrl}}/account/delete/democandidate
+###
+# @name updateAccount
+PUT {{baseUrl}}/account/update
+Content-Type: application/json
+
+{
+    "username":"tungba2",
+    "password":"1",
+    "role": "candidate"
+}
+

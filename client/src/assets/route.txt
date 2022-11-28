@@ -1,0 +1,45 @@
+/company
+/company/detail/:username
+/company/delete/:username
+/company/create
+/company/update
+
+/candidate
+/candidate/detail/:username
+/candidate/delete/:username
+/candidate/create
+/candidate/update
+
+/account
+/account/detail/:id
+/account/delete/:id
+/account/create
+/account/update
+
+/job
+/job/detail/:idJob
+/job/delete/:idJob
+/job/create
+/job/update
+
+/tag
+/tag/create/:name
+
+
+{offeringjob.map((job, index) => {
+              return (
+                <tr key={index}>
+                  <td className="p-2 border-b border-r border-t border-l">{index}</td>
+                  <td className="p-2 border-b border-r border-t">{job.Name}</td>
+                  <td className="p-2 border-b border-r border-t">{job.Salary}</td>
+                  <td className="p-2 border-b border-r border-t">{job.Level}</td>
+                  <td className="p-2 border-b border-r border-t">{job.typeOfTime}</td>
+                  <td className="p-2 border-b border-r border-t">{job.typeOfWork}</td>
+                  <td className="p-2 border-b border-r border-t">
+                    {job.tags.map((tag, index) => {
+                      return (
+                        <div className="my-2">
+                          <TagJob value={tag} />
+                        </div>
+                      );
+                    })}

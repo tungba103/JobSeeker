@@ -1,0 +1,50 @@
+@baseUrl = http://localhost:5000
+
+#Job
+# @name getAllJob
+GET {{baseUrl}}/job
+###
+# @name getJobById
+GET {{baseUrl}}/job/detail/11
+###
+# @name addJob
+POST {{baseUrl}}/job/create
+Content-Type: application/json
+
+{
+    "name":"Web",
+    "salary":"1500 USD",
+    "level":"Senior",
+    "typeOfTime":"Part-time" ,
+    "typeOfWork":"Online" ,
+    "tags":"Java, Python" ,
+    "location":"Nguyen, Ho Chi Minh",
+    "time":"26/11/2002",
+    "description":"You will hero",
+    "fromCompany":"tungba4",
+    "status":"Approving"
+}
+###
+# @name deleteJob
+DELETE {{baseUrl}}/job/delete/11
+###
+# @name updateJob
+PUT {{baseUrl}}/job/update
+Content-Type: application/json
+
+{
+    "idJob": 1,
+    "name": "Internship / Fresh Graduate Software Developer",
+    "salary": "3,200 - 3,500 USD",
+    "level": "Fresher",
+    "typeOfTime": "Part-time",
+    "typeOfWork": "At Office",
+    "tags": "Java,Javascript",
+    "location": "Ha Noi",
+    "time": "20/11/2022",
+    "description": "You will work directly",
+    "fromCompany": "tungba7",
+    "pendingCandidate": null,
+    "appliedCandidate": "tungba2",
+    "status": "Ready"
+}
